@@ -1,0 +1,33 @@
+language: node_js
+node_js:
+- '10'
+notifications:
+  email: false
+cache:
+  directories:
+  - node_modules
+env:
+  global:
+  - NODE_ENV=test
+before_install:
+- openssl aes-256-cbc -K $encrypted_2e47470ac86d_key -iv $encrypted_2e47470ac86d_iv
+  -in keyfile.json.enc -out keyfile.json -d
+- echo "//registry.npmjs.org/:_authToken="${NPM_TOKEN} > .npmrc
+- npm i -g npm@6
+- npm i -g serverless
+install:
+- npm ci
+script:
+- npm test
+after_success:
+- npm run semantic-release
+deploy:
+  skip_cleanup: true
+  provider: script
+  script: serverless deploy
+  on:
+    branch: master
+branches:
+  only:
+  - master
+  - "/^greenkeeper.*$/"
