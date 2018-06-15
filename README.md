@@ -118,7 +118,7 @@ Keyfile is encrypted and ready on travvis. Next step.
 
 ### Semantic-Release
 
-[Documentation](https://semantic-release.gitbooks.io/semantic-release/content/
+[Documentation](https://semantic-release.gitbooks.io/semantic-release/content/)
 
 Once travis and github are set up, let's install the tokens:
 
