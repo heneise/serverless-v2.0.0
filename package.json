@@ -6,7 +6,7 @@
   "scripts": {
     "start": "node index.js",
     "pretest": "standard | snazzy",
-    "test": "tap --coverage --jobs-auto './test/{unit,integration}/**/*-test.js'"
+    "test": "tap --coverage --jobs-auto './test/*-test.js'"
   },
   "author": "Heneise Consulting <info@heneise.consulting> (http://heneise.consulting)",
   "license": "MIT",
