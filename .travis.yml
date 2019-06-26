@@ -9,9 +9,6 @@ cache:
 env:
   global:
     - NODE_ENV=test
-before_install:
-  - rm .npmrc
-  - 'echo "//registry.npmjs.org/:_authToken="${NPM_TOKEN} > .npmrc'
 install:
   - npm i
 script:
