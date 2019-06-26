@@ -16,7 +16,7 @@ before_install:
 - npm i -g npm@6
 - npm i -g serverless
 install:
-- npm ci
+- npm install
 script:
 - npm test
 after_success:
