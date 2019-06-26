@@ -1,0 +1,11 @@
+steps:
+- name: 'gcr.io/cloud-builders/gcloud'
+  args:
+  - functions
+  - deploy
+  - hello
+  - --source=.
+  - --runtime=nodejs8
+  - --trigger-http
+  - --region=eu-west-1
+  - --memory=128
