@@ -5,7 +5,7 @@ steps:
   - deploy
   - hello
   - --source=.
-  - --runtime=nodejs8
+  - --runtime=nodejs10
   - --trigger-http
-  - --region=eu-west-1
+  - --region=europe-west1
   - --memory=128
